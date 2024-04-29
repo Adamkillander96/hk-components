@@ -2,7 +2,7 @@ import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'killander',
+  namespace: 'hagshult',
   validatePrimaryPackageOutputTarget: true,
   outputTargets: [
     {

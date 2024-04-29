@@ -1,21 +1,20 @@
 {
-  "name": "adam-killander",
+  "name": "hagshult",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Komponenter för Hagshultskossorna.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/adam-killander/adam-killander.esm.js",
+  "unpkg": "dist/hagshult/hagshult.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/adam-killander/adam-killander.esm.js",
-      "require": "./dist/adam-killander/adam-killander.cjs.js"
+      "import": "./dist/hagshult/hagshult.esm.js"
     },
-    "./my-component": {
-      "import": "./dist/components/my-component.js",
-      "types": "./dist/components/my-component.d.ts"
+    "./hk-styckdetalj": {
+      "import": "./dist/components/hk-styckdetalj.js",
+      "types": "./dist/components/hk-styckdetalj.d.ts"
     },
     "./loader": {
       "import": "./loader/index.js",
