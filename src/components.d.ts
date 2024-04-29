@@ -5,57 +5,59 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { StyckDetaljTitle } from "./index";
+export { StyckDetaljTitle } from "./index";
 export namespace Components {
-    interface MyComponent {
+    interface HkStyckdetalj {
         /**
-          * The first name
+          * Set the language. Swedish (sv) or English (en).
          */
-        "first": string;
+        "language": 'sv' | 'en';
         /**
-          * The last name
+          * Set a max-width if the component is not inside a max-width container. Any valid CSS string value is accepted.
          */
-        "last": string;
+        "maxWidth": string;
         /**
-          * The middle name
+          * Set a preselected detail.
          */
-        "middle": string;
+        "selected"?: StyckDetaljTitle;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLHkStyckdetaljElement extends Components.HkStyckdetalj, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLHkStyckdetaljElement: {
+        prototype: HTMLHkStyckdetaljElement;
+        new (): HTMLHkStyckdetaljElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "hk-styckdetalj": HTMLHkStyckdetaljElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface HkStyckdetalj {
         /**
-          * The first name
+          * Set the language. Swedish (sv) or English (en).
          */
-        "first"?: string;
+        "language"?: 'sv' | 'en';
         /**
-          * The last name
+          * Set a max-width if the component is not inside a max-width container. Any valid CSS string value is accepted.
          */
-        "last"?: string;
+        "maxWidth"?: string;
         /**
-          * The middle name
+          * Set a preselected detail.
          */
-        "middle"?: string;
+        "selected"?: StyckDetaljTitle;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "hk-styckdetalj": HkStyckdetalj;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "hk-styckdetalj": LocalJSX.HkStyckdetalj & JSXBase.HTMLAttributes<HTMLHkStyckdetaljElement>;
         }
     }
 }

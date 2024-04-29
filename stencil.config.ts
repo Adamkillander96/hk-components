@@ -1,11 +1,14 @@
 import { Config } from '@stencil/core';
+import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'adam-killander',
+  namespace: 'killander',
+  validatePrimaryPackageOutputTarget: true,
   outputTargets: [
     {
       type: 'dist',
       esmLoaderPath: '../loader',
+      isPrimaryPackageOutputTarget: true,
     },
     {
       type: 'dist-custom-elements',
@@ -17,10 +20,10 @@ export const config: Config = {
     },
     {
       type: 'www',
-      serviceWorker: null, // disable service workers
+      serviceWorker: false,
     },
   ],
-  testing: {
-    browserHeadless: "new",
-  },
+  plugins: [sass()],
+  hashFileNames: false,
+  preamble: 'Built with Stencil \nBy Adam Killander.',
 };

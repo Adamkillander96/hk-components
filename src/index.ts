@@ -8,5 +8,8 @@
  * to consume components of this package as outlined in the `README.md`.
  */
 
-export { format } from './utils/utils';
+export { StyckDetaljTitle, StyckDetaljer } from './constants/types';
+export * from './constants/data';
+export * from './constants/translations';
+export * from './helpers';
 export type * from './components.d.ts';
