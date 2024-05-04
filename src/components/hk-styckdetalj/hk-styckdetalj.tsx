@@ -225,7 +225,7 @@ export class HkStyckdetalj {
           {this.createNav()}
 
           <section class="hk-styckdetalj-content">
-            {data.map(({ number, title }) => (
+            {data.map(({ number, title, buttons }) => (
               <div class="hk-styckdetalj-content-info" id={createTabId(title)} role="tabpanel" tabindex="0" aria-labelledby={createButtonId(title)} hidden={!this.isActive(title)}>
                 <h3>
                   {number}. {this.translate(title)}
@@ -235,6 +235,11 @@ export class HkStyckdetalj {
                   .map(txt => (
                     <p>{txt}</p>
                   ))}
+                {buttons?.map(({ url }, index) => (
+                  <a class="hk-styckdetalj-link" href={url} target="_blank">
+                    {this.translate(`${title}_BTN_${index}`)}
+                  </a>
+                ))}
               </div>
             ))}
           </section>

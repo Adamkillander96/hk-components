@@ -1,7 +1,7 @@
 export type HkLink = {
-  text: string;
+  text?: string;
   url: string;
-  external: '_blank' | '_self';
+  external?: '_blank' | '_self';
 };
 
 export type StyckDetaljTitle =
