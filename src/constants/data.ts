@@ -61,6 +61,11 @@ export const data: StyckDetaljer[] = [
   {
     title: 'SVANS',
     number: 7,
+    buttons: [
+      {
+        url: 'https://hagshult.se/butik/kott/svans/',
+      },
+    ],
   },
   {
     title: 'RULLE',
